@@ -1,0 +1,15 @@
+0	Motor_2_Speed_Alarm	518	Motor_2.Speed	Cluster1
+1	Motor_3_Speed_Alarm	518	Motor_3.Speed	Cluster1
+2	Motor_1_Speed_Alarm	518	Motor_1.Speed	Cluster1
+3	Motor_2_Power_Alarm	518	Motor_2.Power	Cluster1
+4	Motor_3_Power_Alarm	518	Motor_3.Power	Cluster1
+5	Motor_1_Power_Alarm	518	Motor_1.Power	Cluster1
+6	Tank_2_Power_Alarm	518	Tank_2.Power	Cluster1
+7	Tank_3_Power_Alarm	518	Tank_3.Power	Cluster1
+8	Tank_1_Power_Alarm	518	Tank_1.Power	Cluster1
+9	Tank_2_Flow_Alarm	518	Tank_2.Flow	Cluster1
+10	Tank_3_Flow_Alarm	518	Tank_3.Flow	Cluster1
+11	Tank_1_Flow_Alarm	518	Tank_1.Flow	Cluster1
+12	Tank_2_Level_Alarm	518	Tank_2.Level	Cluster1
+13	Tank_3_Level_Alarm	518	Tank_3.Level	Cluster1
+14	Tank_1_Level_Alarm	518	Tank_1.Level	Cluster1

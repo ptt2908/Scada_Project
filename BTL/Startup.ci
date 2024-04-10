@@ -1,0 +1,72 @@
+//-----------------------------------------------------------------------------
+//
+//	FUNCTION NAME:	ClientStartup
+//
+//	SUMMARY:
+//		Code to execute at the start-up of the client process
+//
+//	REMARKS:
+//		This function needs to be assinged to parameter [Client]StartupCode.
+//
+//-----------------------------------------------------------------------------
+
+FUNCTION
+ClientStartup()
+
+	// Register the confirm_shutdown event handler
+	OnEvent(49, _ConfirmShutdown);
+END
+
+
+//-----------------------------------------------------------------------------
+//
+//	FUNCTION NAME:	_ConfirmShutdown
+//
+//	SUMMARY:
+//		Callback function to handle shutdown confirmation event
+//			
+//	RETURNS: 
+//		It returns 1 to cancel the shutdown operation and let the pop-up
+//		window to handle the shutdown operation.
+//		If the pop-up cannot be displayed, it returns 0.
+//
+//	REMARKS:
+//		This function needs to be registered to the shutdown confirmation event.
+//
+//-----------------------------------------------------------------------------
+
+PRIVATE
+INT FUNCTION _ConfirmShutdown()
+
+	INT		x, y, winNo;
+	STRING	pageShutdown = "!Shutdown";
+	REAL	scaleX, scaleY;
+
+	x = StrToInt(PageInfo(14)) + StrToInt(PageInfo(12)) / 2;
+	y = StrToInt(PageInfo(15)) + StrToInt(PageInfo(13)) / 2;
+
+	scaleX = x; scaleX = scaleX / StrToReal(PageInfo(16));
+	scaleY = y; scaleY = scaleY / StrToReal(PageInfo(17));
+
+	// Check if window already open
+	winNo = WinNumber(pageShutdown);
+	IF (winNo > -1) THEN
+		// Switch to opened window
+		WinGoto(WinNo);
+		WinPos(x - PageFileInfo(pageShutdown, 0) / 2, y - PageFileInfo(pageShutdown, 1) / 2);
+	ELSE
+		// Open new window
+		winNo = WinNewAt(pageShutdown, scaleX - PageFileInfo(pageShutdown, 0) / 2, scaleY - PageFileInfo(pageShutdown, 1) / 2, 2+8+128);
+		IF (winNo > -1) THEN
+			WinSetName(pageShutdown);
+		END
+	END
+
+	IF (winNo > -1) THEN
+		// Return TRUE to cancel the current operation and let the !Shutdown page selection decide
+		RETURN (1);
+	ELSE
+		// Return FALSE to continue with the current operation
+		RETURN (0);
+	END
+END

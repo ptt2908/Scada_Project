@@ -1,0 +1,57 @@
+Motor_2_Start	Internal		Cluster1	Motor_2.Start	Start
+Motor_2_Stop	Internal		Cluster1	Motor_2.Stop	Stop
+Motor_2_Startst	PLC	PLC.Motor_2.Start	Cluster1	Motor_2.Startst	Startst
+Motor_2_Stopst	PLC	PLC.Motor_2.Stop	Cluster1	Motor_2.Stopst	Stopst
+Motor_2_Enable	PLC	PLC.Motor_2.Enable	Cluster1	Motor_2.Enable	Enable
+Motor_2_Cmd	PLC	PLC.Motor_2.Cmd	Cluster1	Motor_2.Cmd	Cmd
+Motor_2_Power	PLC	PLC.Motor_2.PowerREAL	Cluster1	Motor_2.Power	Power
+Motor_2_Speed	PLC	PLC.Motor_2.SpeedREAL	Cluster1	Motor_2.Speed	Speed
+Motor_3_Start	Internal		Cluster1	Motor_3.Start	Start
+Motor_3_Stop	Internal		Cluster1	Motor_3.Stop	Stop
+Motor_3_Startst	PLC	PLC.Motor_3.Start	Cluster1	Motor_3.Startst	Startst
+Motor_3_Stopst	PLC	PLC.Motor_3.Stop	Cluster1	Motor_3.Stopst	Stopst
+Motor_3_Enable	PLC	PLC.Motor_3.Enable	Cluster1	Motor_3.Enable	Enable
+Motor_3_Cmd	PLC	PLC.Motor_3.Cmd	Cluster1	Motor_3.Cmd	Cmd
+Motor_3_Power	PLC	PLC.Motor_3.PowerREAL	Cluster1	Motor_3.Power	Power
+Motor_3_Speed	PLC	PLC.Motor_3.SpeedREAL	Cluster1	Motor_3.Speed	Speed
+Tank_2_Open	Internal		Cluster1	Tank_2.Open	Open
+Tank_2_Close	Internal		Cluster1	Tank_2.Close	Close
+Tank_2_Openst	PLC	PLC.Tank_2.Open	Cluster1	Tank_2.Openst	Openst
+Tank_2_Closest	PLC	PLC.Tank_2.Close	Cluster1	Tank_2.Closest	Closest
+Tank_2_Enable	PLC	PLC.Tank_2.Enable	Cluster1	Tank_2.Enable	Enable
+Tank_2_Cmd	PLC	PLC.Tank_2.Cmd	Cluster1	Tank_2.Cmd	Cmd
+Tank_2_Power	PLC	PLC.Tank_2.PowerREAL	Cluster1	Tank_2.Power	Power
+Tank_2_Level	PLC	PLC.Tank_2.LevelREAL	Cluster1	Tank_2.Level	Level
+Tank_2_Flow	PLC	PLC.Tank_2.FlowREAL	Cluster1	Tank_2.Flow	Flow
+Tank_3_Open	Internal		Cluster1	Tank_3.Open	Open
+Tank_3_Close	Internal		Cluster1	Tank_3.Close	Close
+Tank_3_Openst	PLC	PLC.Tank_3.Open	Cluster1	Tank_3.Openst	Openst
+Tank_3_Closest	PLC	PLC.Tank_3.Close	Cluster1	Tank_3.Closest	Closest
+Tank_3_Enable	PLC	PLC.Tank_3.Enable	Cluster1	Tank_3.Enable	Enable
+Tank_3_Cmd	PLC	PLC.Tank_3.Cmd	Cluster1	Tank_3.Cmd	Cmd
+Tank_3_Power	PLC	PLC.Tank_3.PowerREAL	Cluster1	Tank_3.Power	Power
+Tank_3_Level	PLC	PLC.Tank_3.LevelREAL	Cluster1	Tank_3.Level	Level
+Tank_3_Flow	PLC	PLC.Tank_3.FlowREAL	Cluster1	Tank_3.Flow	Flow
+Tank_1_Open	Internal		Cluster1	Tank_1.Open	Open
+Tank_1_Close	Internal		Cluster1	Tank_1.Close	Close
+Tank_1_Openst	Modbus_RTU	Modbus_RTU.Tank_1.Open	Cluster1	Tank_1.Openst	Openst
+Tank_1_Closest	Modbus_RTU	Modbus_RTU.Tank_1.Close	Cluster1	Tank_1.Closest	Closest
+Tank_1_Enable	Modbus_RTU	Modbus_RTU.Tank_1.Enable	Cluster1	Tank_1.Enable	Enable
+Tank_1_Cmd	Modbus_RTU	Modbus_RTU.Tank_1.Cmd	Cluster1	Tank_1.Cmd	Cmd
+Tank_1_Power	Modbus_RTU	Modbus_RTU.Tank_1.PowerREAL	Cluster1	Tank_1.Power	Power
+Tank_1_Level	Modbus_RTU	Modbus_RTU.Tank_1.LevelREAL	Cluster1	Tank_1.Level	Level
+Tank_1_Flow	Modbus_RTU	Modbus_RTU.Tank_1.FlowREAL	Cluster1	Tank_1.Flow	Flow
+Motor_1_Start	Internal		Cluster1	Motor_1.Start	Start
+Motor_1_Stop	Internal		Cluster1	Motor_1.Stop	Stop
+Motor_1_Startst	RSsim_TCP	10001	Cluster1	Motor_1.Startst	Startst
+Motor_1_Stopst	RSsim_TCP	10002	Cluster1	Motor_1.Stopst	Stopst
+Motor_1_Enable	RSsim_TCP	00001	Cluster1	Motor_1.Enable	Enable
+Motor_1_Cmd	RSsim_TCP	00002	Cluster1	Motor_1.Cmd	Cmd
+Motor_1_Power	RSsim_TCP	40001	Cluster1	Motor_1.Power	Power
+Motor_1_Speed	RSsim_TCP	30001	Cluster1	Motor_1.Speed	Speed
+Tank_2_Level_SV	PLC	PLC.Tank_2.LevelSV	Cluster1	Tank_2.Level_SV	Level_SV
+Tank_3_Level_SV	PLC	PLC.Tank_3.LevelSV	Cluster1	Tank_3.Level_SV	Level_SV
+Tank_1_Level_SV	Modbus_RTU	Modbus_RTU.Tank_1.LevelSV	Cluster1	Tank_1.Level_SV	Level_SV
+Motor_2_Speed_SV	PLC	PLC.Motor_2.SpeedSV	Cluster1	Motor_2.Speed_SV	Speed_SV
+Motor_3_Speed_SV	PLC	PLC.Motor_3.SpeedSV	Cluster1	Motor_3.Speed_SV	Speed_SV
+Motor_1_Speed_SV	RSsim_TCP	30003	Cluster1	Motor_1.Speed_SV	Speed_SV

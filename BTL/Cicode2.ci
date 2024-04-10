@@ -1,0 +1,121 @@
+STRING sSQL;
+INT hSQL = -1;
+FUNCTION Report_DB()
+ INT Flag = 0;
+ STRING status;
+ STRING data;
+ 
+ hSQL = SQLConnect("DSN=MySQL_Server");
+ IF hSQL<0 THEN
+        Message("Connect error",SQLErrMsg(),48);
+ ELSE
+ 	//Motor 1
+ 		IF Motor_1_Cmd THEN
+    			status = "'ON'";
+ 		ELSE
+    			status = "'OFF'";
+ 		END
+ 			data = status + ",'" + TimestampToStr(Motor_1_Cmd.field.vt,5) + "'," +
+ 			RealToStr(Motor_1_Power,4,1) + ",'" + TimestampToStr(Motor_1_Power.field.vt,5) + "'," +
+ 			RealToStr(Motor_1_Speed,6,1) + ",'" + TimestampToStr(Motor_1_Speed.field.vt,5);
+ 
+ 		SQLSet(hSQL,"INSERT INTO Motor_1(Status,Status_ts,Power,Power_ts,Speed,Speed_ts)VALUE(");
+ 		SQLAppend(hSQL,data + "')");
+ 		Flag = SQLExec(hSQL,"");
+ 		IF Flag<>0 THEN
+    		Message("Status error",SQLErrMsg(),48);
+ 		END
+ 
+ 	//Motor 2
+ 		IF Motor_2_Cmd THEN
+    			status = "'ON'";
+ 		ELSE
+    			status = "'OFF'";
+ 		END
+ 			data = status + ",'" + TimestampToStr(Motor_2_Cmd.field.vt,5) + "'," +
+ 			RealToStr(Motor_2_Power,4,1) + ",'" + TimestampToStr(Motor_2_Power.field.vt,5) + "'," +
+ 			RealToStr(Motor_2_Speed,6,1) + ",'" + TimestampToStr(Motor_2_Speed.field.vt,5);
+ 
+ 		SQLSet(hSQL,"INSERT INTO Motor_2(Status,Status_ts,Power,Power_ts,Speed,Speed_ts)VALUE(");
+ 		SQLAppend(hSQL,data + "')");
+ 		Flag = SQLExec(hSQL,"");
+ 		IF Flag<>0 THEN
+    		Message("Status error",SQLErrMsg(),48);
+ 		END
+ 		
+ 	//Motor 3
+ 		IF Motor_3_Cmd THEN
+    			status = "'ON'";
+ 		ELSE
+    			status = "'OFF'";
+ 		END
+ 			data = status + ",'" + TimestampToStr(Motor_3_Cmd.field.vt,5) + "'," +
+ 			RealToStr(Motor_3_Power,4,1) + ",'" + TimestampToStr(Motor_3_Power.field.vt,5) + "'," +
+ 			RealToStr(Motor_3_Speed,6,1) + ",'" + TimestampToStr(Motor_3_Speed.field.vt,5);
+ 
+ 		SQLSet(hSQL,"INSERT INTO Motor_3(Status,Status_ts,Power,Power_ts,Speed,Speed_ts)VALUE(");
+ 		SQLAppend(hSQL,data + "')");
+ 		Flag = SQLExec(hSQL,"");
+ 		IF Flag<>0 THEN
+    		Message("Status error",SQLErrMsg(),48);
+ 		END
+ 		
+ 	
+ 	//Tank 2
+ 		IF Tank_2_Cmd THEN
+    			status = "'ON'";
+ 		ELSE
+    			status = "'OFF'";
+ 		END
+ 			data = status + ",'" + TimestampToStr(Tank_2_Cmd.field.vt,5) + "'," +
+ 			RealToStr(Tank_2_Power,4,1) + ",'" + TimestampToStr(Tank_2_Power.field.vt,5) + "'," +
+ 			RealToStr(Tank_2_Level,6,1) + ",'" + TimestampToStr(Tank_2_Level.field.vt,5) + "'," +
+ 			RealToStr(Tank_2_Flow,6,1) + ",'" + TimestampToStr(Tank_2_Flow.field.vt,5);
+ 
+ 		SQLSet(hSQL,"INSERT INTO Tank_2(Status,Status_ts,Power,Power_ts,Level,Level_ts,Flow,Flow_ts)VALUE(");
+ 		SQLAppend(hSQL,data + "')");
+ 		Flag = SQLExec(hSQL,"");
+ 		IF Flag<>0 THEN
+    		Message("Status error",SQLErrMsg(),48);
+ 		END
+
+ 	//Tank 1
+ 		IF Tank_1_Cmd THEN
+    			status = "'ON'";
+ 		ELSE
+    			status = "'OFF'";
+ 		END
+ 			data = status + ",'" + TimestampToStr(Tank_1_Cmd.field.vt,5) + "'," +
+ 			RealToStr(Tank_1_Power,4,1) + ",'" + TimestampToStr(Tank_1_Power.field.vt,5) + "'," +
+ 			RealToStr(Tank_1_Level,6,1) + ",'" + TimestampToStr(Tank_1_Level.field.vt,5) + "'," +
+ 			RealToStr(Tank_1_Flow,6,1) + ",'" + TimestampToStr(Tank_1_Flow.field.vt,5);
+ 
+ 		SQLSet(hSQL,"INSERT INTO Tank_1(Status,Status_ts,Power,Power_ts,Level,Level_ts,Flow,Flow_ts)VALUE(");
+ 		SQLAppend(hSQL,data + "')");
+ 		Flag = SQLExec(hSQL,"");
+ 		IF Flag<>0 THEN
+    		Message("Status error",SQLErrMsg(),48);
+ 		END
+ 		
+ 		//Tank 3
+ 		IF Tank_3_Cmd THEN
+    			status = "'ON'";
+ 		ELSE
+    			status = "'OFF'";
+ 		END
+ 			data = status + ",'" + TimestampToStr(Tank_3_Cmd.field.vt,5) + "'," +
+ 			RealToStr(Tank_3_Power,4,1) + ",'" + TimestampToStr(Tank_3_Power.field.vt,5) + "'," +
+ 			RealToStr(Tank_3_Level,6,1) + ",'" + TimestampToStr(Tank_3_Level.field.vt,5) + "'," +
+ 			RealToStr(Tank_3_Flow,6,1) + ",'" + TimestampToStr(Tank_3_Flow.field.vt,5);
+ 
+ 		SQLSet(hSQL,"INSERT INTO Tank_3(Status,Status_ts,Power,Power_ts,Level,Level_ts,Flow,Flow_ts)VALUE(");
+ 		SQLAppend(hSQL,data + "')");
+ 		Flag = SQLExec(hSQL,"");
+ 		IF Flag<>0 THEN
+    		Message("Status error",SQLErrMsg(),48);
+ 		END
+ 		
+ 	
+ END
+     SQLDisconnect(hSQL);
+END
